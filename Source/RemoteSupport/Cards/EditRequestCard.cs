@@ -36,6 +36,8 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
 
             string issueTitle = string.Empty;
             string issueDescription = string.Empty;
+            string issueCategory = string.Empty;
+            
             var dynamicElements = new List<AdaptiveElement>();
             var ticketAdditionalFields = new List<AdaptiveElement>();
             bool showTitleValidation = false;
