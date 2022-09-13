@@ -142,7 +142,7 @@
     <comment>Text to show in confirmation card.</comment>
   </data>
   <data name="NormalText" xml:space="preserve">
-    <value>Chat</value>
+    <value>Teams Chat</value>
     <comment>Text to show on the radio button when selected normal.</comment>
   </data>
   <data name="CategoryOneText" xml:space="preserve">
@@ -170,7 +170,7 @@
     <comment>Text to show on the update button in adaptive card.</comment>
   </data>
   <data name="UrgentText" xml:space="preserve">
-    <value>Call back</value>
+    <value>Teams Call back</value>
     <comment>Text to show on the radio button when selected urgent.</comment>
   </data>
   <data name="WithdrawConfirmation" xml:space="preserve">
@@ -262,7 +262,7 @@
     <comment>Text to show in change status dropdown choice in request details card.</comment>
   </data>
   <data name="EndUserNotificationText" xml:space="preserve">
-    <value>We have received your request with chat session #{0}. &lt;br/&gt;  &lt;br/&gt; &lt;p style="font-style: italic;"&gt;(1) Chat requests received after TSD operating hours &lt;b&gt;(Mon-Fri 8am-8pm, Sat 8am-2pm)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after 2pm will be attended on the next business day.&lt;/p&gt;</value>
+    <value>We have received your request with chat session #{0}. &lt;br/&gt;  &lt;br/&gt; &lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 2pm (Sat )&lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
     <comment>Text to show EndUser notification when request is submitted.</comment>
   </data>
   <data name="SmeAssignedStatus" xml:space="preserve">
@@ -442,7 +442,7 @@
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
-    <value>Contact Number</value>
+    <value>Call Back Number</value>
     <comment>Text to show as title text in new request card.</comment>
   </data>
   <data name="WithdrawErrorMessage" xml:space="preserve">
@@ -466,7 +466,7 @@
     <comment>Text to show for button action.</comment>
   </data>
   <data name="DesciptionPlaceHolderText" xml:space="preserve">
-    <value>Describe the problem. </value>
+    <value>Describe the problem </value>
     <comment>Text to show in desciption place holder.</comment>
   </data>
   <data name="NewRequestTitle" xml:space="preserve">
@@ -482,7 +482,7 @@
     <comment>Text to show in card.</comment>
   </data>
   <data name="TitlePlaceHolderText" xml:space="preserve">
-    <value>Provide contact number for call back.</value>
+    <value>Input N/A if not applicable</value>
     <comment>Text to show in title place holder.</comment>
   </data>
   <data name="SessionExpired" xml:space="preserve">
