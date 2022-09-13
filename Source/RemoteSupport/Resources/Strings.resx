@@ -442,7 +442,7 @@
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
-    <value>Call Back Number</value>
+    <value>Alternate Call Back Number</value>
     <comment>Text to show as title text in new request card.</comment>
   </data>
   <data name="WithdrawErrorMessage" xml:space="preserve">
