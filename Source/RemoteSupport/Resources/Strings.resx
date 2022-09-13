@@ -146,7 +146,7 @@
     <comment>Text to show on the radio button when selected normal.</comment>
   </data>
   <data name="CategoryOneText" xml:space="preserve">
-    <value>Problem</value>
+    <value>Issue</value>
     <comment>Text to show on the drop down when selected Problem.</comment>
   </data>
   <data name="CategoryTwoText" xml:space="preserve">
