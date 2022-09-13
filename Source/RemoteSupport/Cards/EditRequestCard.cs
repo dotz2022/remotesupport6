@@ -44,7 +44,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
 
             if (string.IsNullOrWhiteSpace(ticketDetail.Title))
             {
-                showTitleValidation = false;
+                showTitleValidation = true;
             }
             else
             {
