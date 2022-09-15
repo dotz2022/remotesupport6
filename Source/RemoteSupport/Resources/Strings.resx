@@ -146,15 +146,15 @@
     <comment>Text to show on the radio button when selected normal.</comment>
   </data>
   <data name="CategoryOneText" xml:space="preserve">
-    <value>Issue</value>
+    <value>I need help</value>
     <comment>Text to show on the drop down when selected Problem.</comment>
   </data>
   <data name="CategoryTwoText" xml:space="preserve">
-    <value>Enquiry</value>
+    <value>I need information...</value>
     <comment>Text to show on the drop down when selected Enquiry.</comment>
   </data>
   <data name="CategoryThreeText" xml:space="preserve">
-    <value>Request</value>
+    <value>I need to raise a request...</value>
     <comment>Text to show on the drop down when selected Request.</comment>
   </data>
   <data name="RequestSubmittedContent" xml:space="preserve">
@@ -438,7 +438,7 @@
     <comment>Text to show request type in request submitted card.</comment>
   </data>
   <data name="CategoryTypeText" xml:space="preserve">
-    <value>Type of Request</value>
+    <value>I am here because:</value>
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
@@ -470,7 +470,7 @@
     <comment>Text to show in desciption place holder.</comment>
   </data>
   <data name="NewRequestTitle" xml:space="preserve">
-    <value>New Service Request</value>
+    <value>Hey there! I'm Ocie.</value>
     <comment>Text to show in new request card.</comment>
   </data>
   <data name="SendRequestButtonText" xml:space="preserve">
@@ -478,7 +478,7 @@
     <comment>Text to show for button action.</comment>
   </data>
   <data name="TellUsAboutProblemText" xml:space="preserve">
-    <value> </value>
+    <value>Share your details with me and my friend will engage you soon.</value>
     <comment>Text to show in card.</comment>
   </data>
   <data name="TitlePlaceHolderText" xml:space="preserve">
