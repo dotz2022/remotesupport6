@@ -426,7 +426,7 @@
     <comment>Text to show when user want to edit closed request.</comment>
   </data>
   <data name="DescriptionText" xml:space="preserve">
-    <value>Details</value>
+    <value>Tell me more</value>
     <comment>Text to show description in request submitted card.</comment>
   </data>
   <data name="RequestNumberText" xml:space="preserve">
@@ -434,7 +434,7 @@
     <comment>Text to show as request number in new request card.</comment>
   </data>
   <data name="RequestTypeText" xml:space="preserve">
-    <value>Contact Option</value>
+    <value>I prefer</value>
     <comment>Text to show request type in request submitted card.</comment>
   </data>
   <data name="CategoryTypeText" xml:space="preserve">
@@ -466,7 +466,7 @@
     <comment>Text to show for button action.</comment>
   </data>
   <data name="DesciptionPlaceHolderText" xml:space="preserve">
-    <value>Describe the problem </value>
+    <value>... </value>
     <comment>Text to show in desciption place holder.</comment>
   </data>
   <data name="NewRequestTitle" xml:space="preserve">
