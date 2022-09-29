@@ -470,7 +470,7 @@
     <comment>Text to show in desciption place holder.</comment>
   </data>
   <data name="NewRequestTitle" xml:space="preserve">
-    <value>Hey there! I'm Ocie.</value>
+    <value>Hey there!</value>
     <comment>Text to show in new request card.</comment>
   </data>
   <data name="SendRequestButtonText" xml:space="preserve">
