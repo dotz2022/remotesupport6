@@ -434,7 +434,7 @@
     <comment>Text to show as request number in new request card.</comment>
   </data>
   <data name="RequestTypeText" xml:space="preserve">
-    <value>I prefer</value>
+    <value>I would like to request</value>
     <comment>Text to show request type in request submitted card.</comment>
   </data>
   <data name="CategoryTypeText" xml:space="preserve">
@@ -442,7 +442,7 @@
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
-    <value>Alternate Call Back Number</value>
+    <value>&lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 2pm (Mon - Fri) and 12pm (Sat) &lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
     <comment>Text to show as title text in new request card.</comment>
   </data>
   <data name="WithdrawErrorMessage" xml:space="preserve">
