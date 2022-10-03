@@ -137,16 +137,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                     Value = !string.IsNullOrEmpty(ticketDetail?.RequestType) ? ticketDetail?.RequestType : Constants.NormalString,
                     Style = AdaptiveChoiceInputStyle.Expanded,
                 },
-                new AdaptiveTextBlock()
-                {
-                    Text = localizer.GetString("TitleDisplayText"),
-                    Spacing = AdaptiveSpacing.Medium,
-                },
-                new AdaptiveTextBlock()
-                {
-                    Text = localizer.GetString("TitlePlaceholderText"),
-                    Spacing = AdaptiveSpacing.Small,
-                },
             });
 
             dynamicElements.AddRange(ticketAdditionalFields);

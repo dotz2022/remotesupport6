@@ -262,7 +262,7 @@
     <comment>Text to show in change status dropdown choice in request details card.</comment>
   </data>
   <data name="EndUserNotificationText" xml:space="preserve">
-    <value>We have received your request with chat session #{0}. &lt;br/&gt;  &lt;br/&gt; &lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 2pm (Sat )&lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
+    <value>We have received your request with chat session #{0}. &lt;br/&gt;  &lt;br/&gt; &lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 2pm (Mon-Fri) and 12pm(Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
     <comment>Text to show EndUser notification when request is submitted.</comment>
   </data>
   <data name="SmeAssignedStatus" xml:space="preserve">
@@ -478,7 +478,7 @@
     <comment>Text to show in card.</comment>
   </data>
   <data name="TitlePlaceHolderText" xml:space="preserve">
-    <value>&lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 2pm (Mon - Fri) and 12pm (Sat) &lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
+    <value>You will receive a response on the next business day if you chat with us after 5pm or request for a call after 2pm.</value>
     <comment>Text to show in title place holder.</comment>
   </data>
   <data name="SessionExpired" xml:space="preserve">
