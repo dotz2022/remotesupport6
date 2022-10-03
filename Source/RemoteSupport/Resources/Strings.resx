@@ -322,7 +322,7 @@
     <comment>Text to show notification for user when ticket is assigned to expert team.</comment>
   </data>
   <data name="ClosedTicketUserNotification" xml:space="preserve">
-    <value>Our specialist has reached out to you via direct chat to assist you further.</value>
+    <value>Our specialist has reached out to you to assist you further.</value>
     <comment>Text to show user notification message when ticket is closed by Expert Team.</comment>
   </data>
   <data name="EscalateButtonText" xml:space="preserve">
