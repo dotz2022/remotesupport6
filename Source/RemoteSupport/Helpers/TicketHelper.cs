@@ -26,7 +26,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
         {
             turnContext = turnContext ?? throw new ArgumentNullException(nameof(turnContext));
             if (updatedTicketDetail == null
-                || string.IsNullOrWhiteSpace(updatedTicketDetail.Title)
                 || string.IsNullOrWhiteSpace(updatedTicketDetail.Description)
                 || string.IsNullOrWhiteSpace(updatedTicketDetail.CategoryType)
                 || updatedTicketDetail.IssueOccurredOn == null
@@ -65,7 +64,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
             }
 
             ticketDetail.Description = taskModuleResponseValues?.Description;
-            ticketDetail.Title = taskModuleResponseValues.Title;
             ticketDetail.Severity = (int)(TicketSeverity)Enum.Parse(typeof(TicketSeverity), taskModuleResponseValues.RequestType ?? TicketSeverity.Chat.ToString());
             ticketDetail.Cat = (int)(TicketCat)Enum.Parse(typeof(TicketCat), taskModuleResponseValues.CategoryType ?? TicketCat.Problem.ToString());
             ticketDetail.LastModifiedOn = ConvertToDateTimeoffset(DateTime.Now, turnContext.Activity.Timestamp.Value.Offset);

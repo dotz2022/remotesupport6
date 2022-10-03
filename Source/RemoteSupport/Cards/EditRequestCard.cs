@@ -34,22 +34,11 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
             cardConfiguration = cardConfiguration ?? throw new ArgumentNullException(nameof(cardConfiguration));
             ticketDetail = ticketDetail ?? throw new ArgumentNullException(nameof(ticketDetail));
 
-            string issueTitle = string.Empty;
             string issueDescription = string.Empty;
             var dynamicElements = new List<AdaptiveElement>();
             var ticketAdditionalFields = new List<AdaptiveElement>();
-            bool showTitleValidation = false;
             bool showDescriptionValidation = false;
             bool showDateValidation = false;
-
-            if (string.IsNullOrWhiteSpace(ticketDetail.Title))
-            {
-                showTitleValidation = true;
-            }
-            else
-            {
-                issueTitle = ticketDetail.Title;
-            }
 
             if (string.IsNullOrWhiteSpace(ticketDetail.Description))
             {
@@ -105,13 +94,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 },
                 new AdaptiveTextBlock()
                 {
-                    Text = localizer.GetString("TitleValidationText"),
-                    Spacing = AdaptiveSpacing.None,
-                    IsVisible = showTitleValidation,
-                    Color = AdaptiveTextColor.Attention,
-                },
-                new AdaptiveTextBlock()
-                {
                     Text = localizer.GetString("DescriptionText"),
                     Spacing = AdaptiveSpacing.Medium,
                 },
@@ -159,6 +141,11 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 {
                     Text = localizer.GetString("TitleDisplayText"),
                     Spacing = AdaptiveSpacing.Medium,
+                },
+                new AdaptiveTextBlock()
+                {
+                    Text = localizer.GetString("TitlePlaceholderText"),
+                    Spacing = AdaptiveSpacing.Small,
                 },
             });
 

@@ -32,13 +32,11 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
         {
             cardConfiguration = cardConfiguration ?? throw new ArgumentNullException(nameof(cardConfiguration));
 
-            string issueTitle = string.Empty;
             string issueDescription = string.Empty;
             string issueCategory = string.Empty;
 
             var dynamicElements = new List<AdaptiveElement>();
             var ticketAdditionalFields = new List<AdaptiveElement>();
-            bool showTitleValidation = false;
             bool showDescriptionValidation = false;
             bool showCategoryValidation = false;
             bool showDateValidation = false;
@@ -46,15 +44,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
             if (showValidationMessage)
             {
                 ticketDetail = ticketDetail ?? throw new ArgumentNullException(nameof(ticketDetail));
-                if (string.IsNullOrWhiteSpace(ticketDetail.Title))
-                {
-                    showTitleValidation = true;
-                }
-                else
-                {
-                    issueTitle = ticketDetail.Title;
-                }
-
                 if (string.IsNullOrWhiteSpace(ticketDetail.Description))
                 {
                     showDescriptionValidation = true;
@@ -182,6 +171,11 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                     Text = localizer.GetString("TitleDisplayText"),
                     Spacing = AdaptiveSpacing.Medium,
                 },
+                new AdaptiveTextBlock()
+                {
+                    Text = localizer.GetString("TitlePlaceholderText"),
+                    Spacing = AdaptiveSpacing.Small,
+                },
             });
 
             dynamicElements.AddRange(ticketAdditionalFields);
@@ -260,7 +254,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("RequestNumberText"), $"#{ticketDetail.RowKey}", localizer),
                 CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("CategoryTypeText"), ticketDetail.CategoryType, localizer),
                 CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("RequestTypeText"), ticketDetail.RequestType, localizer),
-                CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("TitleDisplayText"), ticketDetail.Title, localizer),
             });
             dynamicElements.AddRange(ticketAdditionalFields);
             dynamicElements.Add(CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("DescriptionText"), ticketDetail.Description, localizer));

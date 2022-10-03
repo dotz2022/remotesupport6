@@ -145,7 +145,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                     var dynamicElements = new List<AdaptiveElement>
                     {
                         CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("RequestNumberText"), $"#{ticket.TicketId}", localizer),
-                        CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("TitleDisplayText"), ticket.Title, localizer),
                         CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("DescriptionText"), ticket.Description, localizer),
                         CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("CreatedOnText"), ticket.CreatedOn.ToString(CultureInfo.InvariantCulture), localizer),
                     };

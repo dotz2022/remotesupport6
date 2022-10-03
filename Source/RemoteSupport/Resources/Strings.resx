@@ -345,10 +345,6 @@
     <value>Description is required</value>
     <comment>Text to show if description field is empty.</comment>
   </data>
-  <data name="TitleValidationText" xml:space="preserve">
-    <value>Input is required</value>
-    <comment>Text to show if title field is empty.</comment>
-  </data>
     <data name="CategoryValidationText" xml:space="preserve">
     <value>Category is required</value>
     <comment>Text to show if title field is empty.</comment>
@@ -442,7 +438,7 @@
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
-    <value>&lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 2pm (Mon - Fri) and 12pm (Sat) &lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
+    <value>Please note:</value>
     <comment>Text to show as title text in new request card.</comment>
   </data>
   <data name="WithdrawErrorMessage" xml:space="preserve">
@@ -482,7 +478,7 @@
     <comment>Text to show in card.</comment>
   </data>
   <data name="TitlePlaceHolderText" xml:space="preserve">
-    <value>Input N/A if not applicable</value>
+    <value>&lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 2pm (Mon - Fri) and 12pm (Sat) &lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
     <comment>Text to show in title place holder.</comment>
   </data>
   <data name="SessionExpired" xml:space="preserve">
