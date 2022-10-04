@@ -175,7 +175,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 {
                     Text = localizer.GetString("TitlePlaceholderText"),
                     Spacing = AdaptiveSpacing.Small,
-                    Color = AdaptiveTextColor.Light
+                    Color = AdaptiveTextColor.Light,
                 },
             });
 
