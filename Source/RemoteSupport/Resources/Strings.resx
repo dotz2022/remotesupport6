@@ -422,7 +422,7 @@
     <comment>Text to show when user want to edit closed request.</comment>
   </data>
   <data name="DescriptionText" xml:space="preserve">
-    <value>Tell me more</value>
+    <value>Tell me more:</value>
     <comment>Text to show description in request submitted card.</comment>
   </data>
   <data name="RequestNumberText" xml:space="preserve">
@@ -430,7 +430,7 @@
     <comment>Text to show as request number in new request card.</comment>
   </data>
   <data name="RequestTypeText" xml:space="preserve">
-    <value>I would like to request</value>
+    <value>I would like to request:</value>
     <comment>Text to show request type in request submitted card.</comment>
   </data>
   <data name="CategoryTypeText" xml:space="preserve">
@@ -477,7 +477,7 @@
     <value>Share your details with me and my friend will engage you soon.</value>
     <comment>Text to show in card.</comment>
   </data>
-  <data name="TitlePlaceHolderText" xml:space="preserve">
+  <data name="TitlePlaceholderText" xml:space="preserve">
     <value>You will receive a response on the next business day if you chat with us after 5pm or request for a call after 2pm.</value>
     <comment>Text to show in title place holder.</comment>
   </data>
