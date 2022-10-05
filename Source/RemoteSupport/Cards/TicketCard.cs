@@ -83,6 +83,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 new AdaptiveTextBlock()
                 {
                     Text = localizer.GetString("TellUsAboutProblemText"),
+                    Wrap = true,
                     Spacing = AdaptiveSpacing.Small,
                 },
                 new AdaptiveTextBlock()
@@ -160,6 +161,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                         {
                             Title = localizer.GetString("UrgentText"),
                             Value = Constants.UrgentString,
+                            Wrap = true,
                         },
                     },
                     Id = "RequestType",
@@ -169,12 +171,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 new AdaptiveTextBlock()
                 {
                     Text = localizer.GetString("TitleDisplayText"),
-                    Spacing = AdaptiveSpacing.Small,
-                    Color = AdaptiveTextColor.Accent,
-                },
-                new AdaptiveTextBlock()
-                {
-                    Text = localizer.GetString("TitlePlaceholderText"),
+                    Wrap = true,
                     Spacing = AdaptiveSpacing.Small,
                 },
             });
