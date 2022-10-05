@@ -170,12 +170,12 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 {
                     Text = localizer.GetString("TitleDisplayText"),
                     Spacing = AdaptiveSpacing.Small,
+                    Color = AdaptiveTextColor.Accent,
                 },
                 new AdaptiveTextBlock()
                 {
                     Text = localizer.GetString("TitlePlaceholderText"),
                     Spacing = AdaptiveSpacing.Small,
-                    Color = AdaptiveTextColor.Light,
                 },
             });
 

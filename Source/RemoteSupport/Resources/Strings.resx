@@ -170,7 +170,7 @@
     <comment>Text to show on the update button in adaptive card.</comment>
   </data>
   <data name="UrgentText" xml:space="preserve">
-    <value>Teams Call back</value>
+    <value>Teams Call back (Same day call back, if submitted before 12pm)</value>
     <comment>Text to show on the radio button when selected urgent.</comment>
   </data>
   <data name="WithdrawConfirmation" xml:space="preserve">
@@ -262,7 +262,7 @@
     <comment>Text to show in change status dropdown choice in request details card.</comment>
   </data>
   <data name="EndUserNotificationText" xml:space="preserve">
-    <value>We have received your request with chat session #{0}. &lt;br/&gt;  &lt;br/&gt; &lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 2pm (Mon-Fri) and 12pm(Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
+    <value>We have received your request with chat session #{0}. &lt;br/&gt;  &lt;br/&gt; &lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 12pm (Mon-Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
     <comment>Text to show EndUser notification when request is submitted.</comment>
   </data>
   <data name="SmeAssignedStatus" xml:space="preserve">
@@ -438,7 +438,7 @@
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
-    <value>Please note:</value>
+    <value>Cut off time: Chat 5pm, Call back 12pm</value>
     <comment>Text to show as title text in new request card.</comment>
   </data>
   <data name="WithdrawErrorMessage" xml:space="preserve">
@@ -474,11 +474,11 @@
     <comment>Text to show for button action.</comment>
   </data>
   <data name="TellUsAboutProblemText" xml:space="preserve">
-    <value>Share your details with me and my friend will engage you soon.</value>
+    <value>Share the details of your request so that we can better support you.</value>
     <comment>Text to show in card.</comment>
   </data>
   <data name="TitlePlaceholderText" xml:space="preserve">
-    <value>You will receive a response on the next business day if you chat with us after 5pm or request for a call after 2pm.</value>
+    <value>You will receive a response on the next business day.</value>
     <comment>Text to show in title place holder.</comment>
   </data>
   <data name="SessionExpired" xml:space="preserve">
