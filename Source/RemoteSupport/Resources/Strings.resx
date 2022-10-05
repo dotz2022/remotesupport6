@@ -438,7 +438,7 @@
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
-    <value>_We shall reach out to you on the next business day if request is submitted after cut off time - Chat 5pm, Callback 12pm_</value>
+    <value>We shall reach out to you on the next business day if request is submitted after cut off time - Chat 5pm, Callback 12pm</value>
     <comment>Text to show as title text in new request card.</comment>
   </data>
   <data name="WithdrawErrorMessage" xml:space="preserve">
