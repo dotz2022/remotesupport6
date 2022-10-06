@@ -161,7 +161,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                         {
                             Title = localizer.GetString("UrgentText"),
                             Value = Constants.UrgentString,
-                            Wrap = true,
                         },
                     },
                     Id = "RequestType",

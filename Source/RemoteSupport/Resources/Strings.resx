@@ -170,7 +170,7 @@
     <comment>Text to show on the update button in adaptive card.</comment>
   </data>
   <data name="UrgentText" xml:space="preserve">
-    <value>Teams Call back (Same day call back, if submitted before 12pm)</value>
+    <value>Teams Call back (Same day, if requested before 12pm)</value>
     <comment>Text to show on the radio button when selected urgent.</comment>
   </data>
   <data name="WithdrawConfirmation" xml:space="preserve">
