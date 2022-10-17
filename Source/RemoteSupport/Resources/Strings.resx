@@ -438,7 +438,7 @@
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
-    <value>Cut-Off Time for same day responses: Chat (Mon-Fri 5pm, Sat 12pm) | Call back (Mon-Sat 12pm). Timings are in GMT+8.</value>
+    <value>Cut-Off Time for same day responses: &lt;br/&gt; Chat (Mon-Fri 5pm, Sat 12pm) | Call back (Mon-Sat 12pm). Timings are in GMT+8.</value>
     <comment>Text to show as title text in new request card.</comment>
   </data>
   <data name="WithdrawErrorMessage" xml:space="preserve">
