@@ -32,13 +32,11 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
         {
             cardConfiguration = cardConfiguration ?? throw new ArgumentNullException(nameof(cardConfiguration));
 
-            string issueTitle = string.Empty;
             string issueDescription = string.Empty;
             string issueCategory = string.Empty;
 
             var dynamicElements = new List<AdaptiveElement>();
             var ticketAdditionalFields = new List<AdaptiveElement>();
-            bool showTitleValidation = false;
             bool showDescriptionValidation = false;
             bool showCategoryValidation = false;
             bool showDateValidation = false;
@@ -46,15 +44,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
             if (showValidationMessage)
             {
                 ticketDetail = ticketDetail ?? throw new ArgumentNullException(nameof(ticketDetail));
-                if (string.IsNullOrWhiteSpace(ticketDetail.Title))
-                {
-                    showTitleValidation = true;
-                }
-                else
-                {
-                    issueTitle = ticketDetail.Title;
-                }
-
                 if (string.IsNullOrWhiteSpace(ticketDetail.Description))
                 {
                     showDescriptionValidation = true;
@@ -94,6 +83,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 new AdaptiveTextBlock()
                 {
                     Text = localizer.GetString("TellUsAboutProblemText"),
+                    Wrap = true,
                     Spacing = AdaptiveSpacing.Small,
                 },
                 new AdaptiveTextBlock()
@@ -180,22 +170,8 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 new AdaptiveTextBlock()
                 {
                     Text = localizer.GetString("TitleDisplayText"),
+                    Wrap = true,
                     Spacing = AdaptiveSpacing.Medium,
-                },
-                new AdaptiveTextInput()
-                {
-                    Id = "Title",
-                    MaxLength = 100,
-                    Placeholder = localizer.GetString("TitlePlaceHolderText"),
-                    Spacing = AdaptiveSpacing.Small,
-                    Value = issueTitle,
-                },
-                new AdaptiveTextBlock()
-                {
-                    Text = localizer.GetString("TitleValidationText"),
-                    Spacing = AdaptiveSpacing.None,
-                    IsVisible = showTitleValidation,
-                    Color = AdaptiveTextColor.Attention,
                 },
             });
 
@@ -275,7 +251,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                 CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("RequestNumberText"), $"#{ticketDetail.RowKey}", localizer),
                 CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("CategoryTypeText"), ticketDetail.CategoryType, localizer),
                 CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("RequestTypeText"), ticketDetail.RequestType, localizer),
-                CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("TitleDisplayText"), ticketDetail.Title, localizer),
             });
             dynamicElements.AddRange(ticketAdditionalFields);
             dynamicElements.Add(CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("DescriptionText"), ticketDetail.Description, localizer));
