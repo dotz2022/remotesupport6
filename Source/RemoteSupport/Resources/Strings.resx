@@ -170,7 +170,7 @@
     <comment>Text to show on the update button in adaptive card.</comment>
   </data>
   <data name="UrgentText" xml:space="preserve">
-    <value>Teams Call back (Same day response for requests before 12pm)</value>
+    <value>Teams Call back</value>
     <comment>Text to show on the radio button when selected urgent.</comment>
   </data>
   <data name="WithdrawConfirmation" xml:space="preserve">
@@ -438,7 +438,7 @@
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
-    <value>Cut-Off Time for same day responses: Chat (Mon-Fri 5pm, Sat 12pm)| Call back (Mon-Sat 12pm). Timings are in GMT+8.</value>
+    <value>Cut-Off Time for same day responses: Chat (Mon-Fri 5pm, Sat 12pm) | Call back (Mon-Sat 12pm). Timings are in GMT+8.</value>
     <comment>Text to show as title text in new request card.</comment>
   </data>
   <data name="WithdrawErrorMessage" xml:space="preserve">
