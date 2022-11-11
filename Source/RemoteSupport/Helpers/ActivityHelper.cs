@@ -170,8 +170,8 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                     ticketData.AssignedOn = DateTime.UtcNow;
                     ticketData.AssignedToObjectId = message.From.AadObjectId;
                     ticketData.ClosedOn = null;
-                    smeNotification = localizer.GetString("SmeAssignedStatus", message.From.Name);
-                    userNotification = MessageFactory.Text(localizer.GetString("AssignedTicketUserNotification", payload.TicketId, ticketData.TicketId));
+                    smeNotification = localizer.GetString("SmeAssignedStatus", payload.TicketId, message.From.Name);
+                    userNotification = MessageFactory.Text(localizer.GetString("AssignedTicketUserNotification", ticketData.TicketId));
                     break;
 
                 case ChangeTicketStatus.RequestTypeAction:
