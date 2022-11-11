@@ -266,7 +266,7 @@
     <comment>Text to show EndUser notification when request is submitted.</comment>
   </data>
   <data name="SmeAssignedStatus" xml:space="preserve">
-    <value>This request is now assigned to {0}.</value>
+    <value>This request {0} is now assigned to {1}.</value>
     <comment>Text to show notification as assigned request is closed to SME Users.</comment> 
   </data>
   <data name="SmeClosedStatus" xml:space="preserve">
