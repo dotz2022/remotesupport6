@@ -170,7 +170,7 @@
     <comment>Text to show on the update button in adaptive card.</comment>
   </data>
   <data name="UrgentText" xml:space="preserve">
-    <value>Teams Call back (Same day, if requested before 12pm)</value>
+    <value>Teams Call back</value>
     <comment>Text to show on the radio button when selected urgent.</comment>
   </data>
   <data name="WithdrawConfirmation" xml:space="preserve">
@@ -262,11 +262,11 @@
     <comment>Text to show in change status dropdown choice in request details card.</comment>
   </data>
   <data name="EndUserNotificationText" xml:space="preserve">
-    <value>We have received your request with chat session #{0}. &lt;br/&gt;  &lt;br/&gt; &lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 12pm (Mon-Sat)&lt;/b&gt; will be attended on the next business day.&lt;/p&gt;</value>
+    <value>Thank you. We have received your request for chat session #{0}. &lt;br/&gt;  &lt;br/&gt; &lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended to on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 12pm (Mon-Sat)&lt;/b&gt; will be attended to on the next business day.&lt;/p&gt;</value>
     <comment>Text to show EndUser notification when request is submitted.</comment>
   </data>
   <data name="SmeAssignedStatus" xml:space="preserve">
-    <value>This request is now assigned to {0}.</value>
+    <value>This request {0} is now assigned to {1}.</value>
     <comment>Text to show notification as assigned request is closed to SME Users.</comment> 
   </data>
   <data name="SmeClosedStatus" xml:space="preserve">
@@ -430,7 +430,7 @@
     <comment>Text to show as request number in new request card.</comment>
   </data>
   <data name="RequestTypeText" xml:space="preserve">
-    <value>I would like to request:</value>
+    <value>How do you prefer us to contact you?</value>
     <comment>Text to show request type in request submitted card.</comment>
   </data>
   <data name="CategoryTypeText" xml:space="preserve">
@@ -438,7 +438,7 @@
     <comment>Text to show category type in request submitted card.</comment>
   </data>
   <data name="TitleDisplayText" xml:space="preserve">
-    <value>Get same day response before our cut off time (Mon to Fri - Chat 5pm, Call back 12pm | Sat - Chat 12pm, Call back 12pm)</value>
+    <value>Cut-Off Time for same day responses: Chat (Mon-Fri 5pm, Sat 12pm) | Call back (Mon-Sat 12pm). Timings are in GMT+8.</value>
     <comment>Text to show as title text in new request card.</comment>
   </data>
   <data name="WithdrawErrorMessage" xml:space="preserve">
