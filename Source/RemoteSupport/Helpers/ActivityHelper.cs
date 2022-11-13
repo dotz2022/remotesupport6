@@ -166,7 +166,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 
                 case ChangeTicketStatus.AssignToSelfAction:
                     ticketData.TicketStatus = (int)TicketState.Assigned;
-                    ticketData.TicketId = payload.TicketId;
+					ticketData.AssignedToName = message.From.Name;
                     ticketData.AssignedOn = DateTime.UtcNow;
                     ticketData.AssignedToObjectId = message.From.AadObjectId;
                     ticketData.ClosedOn = null;
