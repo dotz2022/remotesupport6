@@ -166,11 +166,12 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 
                 case ChangeTicketStatus.AssignToSelfAction:
                     ticketData.TicketStatus = (int)TicketState.Assigned;
-                    ticketData.AssignedToName = message.From.Name;
+                    ticketData.TicketId = payload.TicketId;
+					ticketData.AssignedToName = message.From.Name;
                     ticketData.AssignedOn = DateTime.UtcNow;
                     ticketData.AssignedToObjectId = message.From.AadObjectId;
                     ticketData.ClosedOn = null;
-                    smeNotification = localizer.GetString("SmeAssignedStatus", payload.TicketId, message.From.Name);
+                    smeNotification = localizer.GetString("SmeAssignedStatus", ticketData.TicketId, message.From.Name);
                     userNotification = MessageFactory.Text(localizer.GetString("AssignedTicketUserNotification", ticketData.TicketId));
                     break;
 
