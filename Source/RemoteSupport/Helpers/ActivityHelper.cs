@@ -165,7 +165,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 				break;
 				
                 case ChangeTicketStatus.AssignToSelfAction:
-<<<<<<< HEAD
 				ticketData.TicketStatus = (int)TicketState.Assigned;
 				ticketData.AssignedToName = message.From.Name;
 				ticketData.AssignedOn = DateTime.UtcNow;
@@ -175,17 +174,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 				userNotification = MessageFactory.Text(localizer.GetString("AssignedTicketUserNotification", ticketData.TicketId));
 				break;
 				
-=======
-                    ticketData.TicketStatus = (int)TicketState.Assigned;
-                    ticketData.AssignedToName = message.From.Name;
-                    ticketData.AssignedOn = DateTime.UtcNow;
-                    ticketData.AssignedToObjectId = message.From.AadObjectId;
-                    ticketData.ClosedOn = null;
-                    smeNotification = localizer.GetString("SmeAssignedStatus", payload.TicketId, message.From.Name);
-                    userNotification = MessageFactory.Text(localizer.GetString("AssignedTicketUserNotification", ticketData.TicketId));
-                    break;
-
->>>>>>> parent of 5ca647c (Update ActivityHelper.cs)
                 case ChangeTicketStatus.RequestTypeAction:
 				ticketData.Severity = (int)(TicketSeverity)Enum.Parse(typeof(TicketSeverity), payload.RequestType);
 				ticketData.RequestType = payload.RequestType;
