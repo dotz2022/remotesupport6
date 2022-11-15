@@ -180,11 +180,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                 logger.LogError("Error while sending card to team.");
                 return null;
             }
-			
-			//send the reply with ticket number
-			var replyActivity = MessageFactory.Text("Ticket id " ticketDetail.TicketId);
-			replyActivity.Id = resourceResponse.Id;
-			await turnContext.SendActivityAsync(replyActivity);
 
             // Update SME team conversation details in storage.
             ticketDetail.SmeTicketActivityId = resourceResponse.ActivityId;
