@@ -181,11 +181,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                 return null;
             }
             
-            // Send the reply with ticket number
-            var replyActivity = MessageFactory.Text("Ticket id ", ticketDetail.TicketId);
-            replyActivity.Id = resourceResponse.Id;
-            await turnContext.SendActivityAsync(replyActivity);
-
             // Update SME team conversation details in storage.
             ticketDetail.SmeTicketActivityId = resourceResponse.ActivityId;
             ticketDetail.SmeConversationId = resourceResponse.Id;
