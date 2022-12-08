@@ -180,7 +180,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                 logger.LogError("Error while sending card to team.");
                 return null;
             }
-            
+
             // Update SME team conversation details in storage.
             ticketDetail.SmeTicketActivityId = resourceResponse.ActivityId;
             ticketDetail.SmeConversationId = resourceResponse.Id;
