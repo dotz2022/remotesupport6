@@ -220,6 +220,9 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
             {
                 ResourceResponse smeResponse = await turnContext.SendActivityAsync(smeNotification);
                 logger.LogInformation($"SME team notified of update to ticket {ticketData.TicketId}, activityId = {smeResponse.Id}");
+                var smereplyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
+                smereplyActivity.Id = smeResponse.Id; //ticketDetail.SmeTicketActivityId;
+                await turnContext.SendActivityAsync(smereplyActivity);            
             }
 
             if (userNotification != null)
@@ -228,6 +231,11 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                 ResourceResponse[] userResponse = await turnContext.Adapter.SendActivitiesAsync(turnContext, new Activity[] { (Activity)userNotification }, cancellationToken);
                 logger.LogInformation($"User notified of update to ticket {ticketData.TicketId}, activityId = {userResponse.FirstOrDefault()?.Id}");
             }
+
+            // send the reply with ticket number to SME reply.
+            var smereplyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
+            smereplyActivity.Id = ticketDetail.SmeTicketActivityId;
+            await turnContext.SendActivityAsync(smereplyActivity);
         }
 
         /// <summary>
