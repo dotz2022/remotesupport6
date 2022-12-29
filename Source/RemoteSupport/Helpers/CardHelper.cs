@@ -184,6 +184,12 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
             // Update SME team conversation details in storage.
             ticketDetail.SmeTicketActivityId = resourceResponse.ActivityId;
             ticketDetail.SmeConversationId = resourceResponse.Id;
+
+            // send the reply with ticket number to SME reply.
+            var smereplyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
+            replyActivity.Id = ticketDetail.SmeTicketActivityId;
+            await turnContext.SendActivityAsync(smereplyActivity);
+
             bool result = await ticketDetailStorageProvider?.UpsertTicketAsync(ticketDetail);
 
             if (!result)
