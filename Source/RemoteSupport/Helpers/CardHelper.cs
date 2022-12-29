@@ -187,7 +187,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 
             // send the reply with ticket number to SME reply.
             var smereplyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
-            replyActivity.Id = ticketDetail.SmeTicketActivityId;
+            smereplyActivity.Id = ticketDetail.SmeTicketActivityId;
             await turnContext.SendActivityAsync(smereplyActivity);
 
             bool result = await ticketDetailStorageProvider?.UpsertTicketAsync(ticketDetail);
