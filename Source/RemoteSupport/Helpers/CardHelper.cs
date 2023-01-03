@@ -174,6 +174,11 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
         {
             Attachment smeTeamCard = new SmeTicketCard(ticketDetail).GetTicketDetailsForSMEChatCard(cardElementMapping, ticketDetail, applicationBasePath, localizer);
             ConversationResourceResponse resourceResponse = await SendCardToTeamAsync(turnContext, smeTeamCard, teamId, microsoftAppCredentials, cancellationToken);
+            
+            // send the reply with ticket number.
+            var replyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
+            replyActivity.Id = turnContext.Activity.ReplyTold;
+            await turnContext.SendActivityAsync(replyActivity);
 
             if (resourceResponse == null)
             {
@@ -184,11 +189,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
             // Update SME team conversation details in storage.
             ticketDetail.SmeTicketActivityId = resourceResponse.ActivityId;
             ticketDetail.SmeConversationId = resourceResponse.Id;
-
-            // send the reply with ticket number to SME reply.
-            var smereplyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
-            smereplyActivity.Id = ticketDetail.SmeConversationId;
-            await turnContext.SendActivityAsync(smereplyActivity);
 
             bool result = await ticketDetailStorageProvider?.UpsertTicketAsync(ticketDetail);
 
