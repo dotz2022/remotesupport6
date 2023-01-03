@@ -177,7 +177,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 
             // send the reply with ticket number.
             var replyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
-            replyActivity.Id = turnContext.Activity.ReplyTold;
+            replyActivity.Id = turnContext.Activity.ReplyToId;
             await turnContext.SendActivityAsync(replyActivity);
 
             if (resourceResponse == null)
