@@ -176,7 +176,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
             ConversationResourceResponse resourceResponse = await SendCardToTeamAsync(turnContext, smeTeamCard, teamId, microsoftAppCredentials, cancellationToken);
 
             ConversationResourceResponse replyResponse = await SendReplyToTeamAsync(turnContext, smeTeamCard, ticketDetail, microsoftAppCredentials, cancellationToken);
-            
+
             // send the reply with ticket number.
             var replyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
             replyActivity.Id = turnContext.Activity.ReplyToId;
@@ -246,8 +246,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 
             return await taskCompletionSource.Task;
         }
-
-  /// <summary>
+        /// <summary>
        /// Send the reply to the specified team.
        /// </summary>
        /// <param name="turnContext">Context object containing information cached for a single turn of conversation with a user.</param>
@@ -257,11 +256,11 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
        /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
        /// <returns><see cref="Task"/>That resolves to a <see cref="ConversationResourceResponse"/>Send a attachment.</returns>
        public static async Task<ConversationResourceResponse> SendReplyToTeamAsync(
-           ITurnContext turnContext,
-           Attachment cardToSend,
-           TicketDetail ticketDetail,
-           MicrosoftAppCredentials microsoftAppCredentials,
-           CancellationToken cancellationToken)
+            ITurnContext turnContext,
+            Attachment cardToSend,
+            TicketDetail ticketDetail,
+            MicrosoftAppCredentials microsoftAppCredentials,
+            CancellationToken cancellationToken)
        {
            turnContext = turnContext ?? throw new ArgumentNullException(nameof(turnContext));
            var botId = microsoftAppCredentials.MicrosoftAppId ?? microsoftAppCredentials.MicrosoftAppId;
