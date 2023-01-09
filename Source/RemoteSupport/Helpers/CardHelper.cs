@@ -175,6 +175,8 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
             Attachment smeTeamCard = new SmeTicketCard(ticketDetail).GetTicketDetailsForSMEChatCard(cardElementMapping, ticketDetail, applicationBasePath, localizer);
             ConversationResourceResponse resourceResponse = await SendCardToTeamAsync(turnContext, smeTeamCard, teamId, microsoftAppCredentials, cancellationToken);
 
+            ConversationResourceResponse replyResponse = await SendReplyToTeamAsync(turnContext, smeTeamCard, ticketDetail, microsoftAppCredentials, cancellationToken);
+            
             // send the reply with ticket number.
             var replyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
             replyActivity.Id = turnContext.Activity.ReplyToId;
@@ -244,6 +246,36 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 
             return await taskCompletionSource.Task;
         }
+
+  /// <summary>
+       /// Send the reply to the specified team.
+       /// </summary>
+       /// <param name="turnContext">Context object containing information cached for a single turn of conversation with a user.</param>
+       /// <param name="cardToSend">The card to send.</param>
+       /// <param name="ticketDetail">Team id to which the message is being sent.</param>
+       /// <param name="microsoftAppCredentials">Microsoft Application credentials for Bot/ME.</param>
+       /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+       /// <returns><see cref="Task"/>That resolves to a <see cref="ConversationResourceResponse"/>Send a attachment.</returns>
+       public static async Task<ConversationResourceResponse> SendReplyToTeamAsync(
+           ITurnContext turnContext,
+           Attachment cardToSend,
+           TicketDetail ticketDetail,
+           MicrosoftAppCredentials microsoftAppCredentials,
+           CancellationToken cancellationToken)
+       {
+           turnContext = turnContext ?? throw new ArgumentNullException(nameof(turnContext));
+           var botId = microsoftAppCredentials.MicrosoftAppId ?? microsoftAppCredentials.MicrosoftAppId;
+           TaskCompletionSource<ConversationResourceResponse> taskCompletionSource = new TaskCompletionSource<ConversationResourceResponse>();
+           await ((BotFrameworkAdapter)turnContext.Adapter).ContinueConversationAsync(
+               botId,
+               turnContext.Activity.GetConversationReference(),
+               async (context, token) =>
+               {
+                   await context.SendActivityAsync("Ticket created " + ticketDetail.TicketId);
+               }, cancellationToken);
+ 
+           return await taskCompletionSource.Task;
+       }
 
         /// <summary>
         /// Gets the email id's of the SME uses who are available for oncallSupport.
