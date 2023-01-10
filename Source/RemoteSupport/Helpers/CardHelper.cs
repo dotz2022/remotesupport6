@@ -246,7 +246,8 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 
             return await taskCompletionSource.Task;
         }
-        /// <summary>
+
+       /// <summary>
        /// Send the reply to the specified team.
        /// </summary>
        /// <param name="turnContext">Context object containing information cached for a single turn of conversation with a user.</param>
@@ -255,6 +256,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
        /// <param name="microsoftAppCredentials">Microsoft Application credentials for Bot/ME.</param>
        /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
        /// <returns><see cref="Task"/>That resolves to a <see cref="ConversationResourceResponse"/>Send a attachment.</returns>
+
        public static async Task<ConversationResourceResponse> SendReplyToTeamAsync(
             ITurnContext turnContext,
             Attachment cardToSend,
@@ -272,7 +274,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                {
                    await context.SendActivityAsync("Ticket created " + ticketDetail.TicketId);
                }, cancellationToken);
- 
+
            return await taskCompletionSource.Task;
        }
 
