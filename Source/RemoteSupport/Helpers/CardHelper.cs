@@ -199,7 +199,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
 
             return resourceResponse;
         }
-s
+
         /// <summary>
         /// Send the given attachment to the specified team.
         /// </summary>
