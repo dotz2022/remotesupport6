@@ -256,7 +256,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
        /// <param name="microsoftAppCredentials">Microsoft Application credentials for Bot/ME.</param>
        /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
        /// <returns><see cref="Task"/>That resolves to a <see cref="ConversationResourceResponse"/>Send a attachment.</returns>
-
        public static async Task<ConversationResourceResponse> SendReplyToTeamAsync(
             ITurnContext turnContext,
             Attachment cardToSend,
