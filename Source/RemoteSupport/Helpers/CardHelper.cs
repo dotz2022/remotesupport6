@@ -248,7 +248,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                             await t2.SendActivityAsync(MessageFactory.Text("Ticket created" + ticketId), c2);
                         },
                     cancellationToken);
-                    
+
                 // return Task.CompletedTask;
                 },
                 cancellationToken);
