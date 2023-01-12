@@ -173,7 +173,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
             CancellationToken cancellationToken)
         {
             Attachment smeTeamCard = new SmeTicketCard(ticketDetail).GetTicketDetailsForSMEChatCard(cardElementMapping, ticketDetail, applicationBasePath, localizer);
-            ConversationResourceResponse resourceResponse = await SendCardToTeamAsync(turnContext, smeTeamCard, teamId, microsoftAppCredentials, cancellationToken);
+            ConversationResourceResponse resourceResponse = await SendCardToTeamAsync(turnContext, smeTeamCard, teamId, microsoftAppCredentials, cancellationToken, ticketDetail.TicketId);
 
             // send the reply with ticket number.
             var replyActivity = MessageFactory.Text("Ticket id " + ticketDetail.TicketId);
@@ -208,13 +208,15 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
         /// <param name="teamId">Team id to which the message is being sent.</param>
         /// <param name="microsoftAppCredentials">Microsoft Application credentials for Bot/ME.</param>
         /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+        /// <param name="ticketId">TicketId</param>
         /// <returns><see cref="Task"/>That resolves to a <see cref="ConversationResourceResponse"/>Send a attachment.</returns>
         public static async Task<ConversationResourceResponse> SendCardToTeamAsync(
             ITurnContext turnContext,
             Attachment cardToSend,
             string teamId,
             MicrosoftAppCredentials microsoftAppCredentials,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken,
+            string ticketId = "")
         {
             turnContext = turnContext ?? throw new ArgumentNullException(nameof(turnContext));
             ConversationParameters conversationParameters = new ConversationParameters
@@ -229,7 +231,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                 turnContext.Activity.ServiceUrl,
                 microsoftAppCredentials,
                 conversationParameters,
-                (newTurnContext, newCancellationToken) =>
+                async (newTurnContext, newCancellationToken) =>
                 {
                     Activity activity = newTurnContext.Activity;
                     taskCompletionSource.SetResult(new ConversationResourceResponse
@@ -238,7 +240,16 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                         ActivityId = activity.Id,
                         ServiceUrl = activity.ServiceUrl,
                     });
-                    return Task.CompletedTask;
+                    await ((BotFrameworkAdapter)turnContext.Adapter).ContinueConversationAsync(
+                    microsoftAppCredentials.MicrosoftAppId,
+                    activity.GetConversationReference(),
+                    async (t2, c2) =>
+                        {
+                            await t2.SendActivityAsync(MessageFactory.Text("Ticket created" + ticketId), c2);
+                        },
+                    cancellationToken);
+                    
+                // return Task.CompletedTask;
                 },
                 cancellationToken);
 
