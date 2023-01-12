@@ -245,7 +245,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Helpers
                     activity.GetConversationReference(),
                     async (t2, c2) =>
                         {
-                            await t2.SendActivityAsync(MessageFactory.Text("Ticket created" + ticketId), c2);
+                            await t2.SendActivityAsync(MessageFactory.Text("Ticket created " + ticketId), c2);
                         },
                     cancellationToken);
 
