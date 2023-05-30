@@ -52,12 +52,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                     Size = AdaptiveTextSize.Large,
                 },
             });
-                                     
-            return new Attachment
-            {
-                ContentType = AdaptiveCard.ContentType,
-                Content = ticketDetailsPersonalChatCard,
-            };
         }
 
         /// <summary>
@@ -108,12 +102,6 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
             });
             dynamicElements.AddRange(ticketAdditionalFields);
             dynamicElements.Add(CardHelper.GetAdaptiveCardColumnSet(localizer.GetString("DescriptionText"), ticketDetail.Description, localizer));
-
-            return new Attachment
-            {
-                ContentType = AdaptiveCard.ContentType,
-                Content = ticketDetailsPersonalChatCard,
-            };
         }
     }
 }
