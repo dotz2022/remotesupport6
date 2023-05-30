@@ -51,7 +51,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
                     Weight = AdaptiveTextWeight.Bolder,
                     Size = AdaptiveTextSize.Large,
                 },
-            };
+            });
                                      
             return new Attachment
             {
