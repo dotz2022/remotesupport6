@@ -474,7 +474,7 @@
     <comment>Text to show for button action.</comment>
   </data>
   <data name="TellUsAboutProblemText" xml:space="preserve">
-    <value>Share the details of your request so that we can better support you.</value>
+    <value>IT Service Desk via Teams will move to Digital Service Desk on HIP and MyWorld on 1 Jun 2023.</value>
     <comment>Text to show in card.</comment>
   </data>
   <data name="TitlePlaceholderText" xml:space="preserve">
