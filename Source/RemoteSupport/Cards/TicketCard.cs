@@ -27,51 +27,7 @@ namespace Microsoft.Teams.Apps.RemoteSupport.Cards
         /// <param name="localizer">The current cultures' string localizer.</param>
         /// <param name="showValidationMessage">Represents whether to show validation message or not.</param>
         /// <param name="ticketDetail"> Information of the ticket which is being created.</param>
-        /// <returns>Returns an attachment of new ticket.</returns>
-        public static Attachment GetNewTicketCard(CardConfigurationEntity cardConfiguration, IStringLocalizer<Strings> localizer, bool showValidationMessage = false, TicketDetail ticketDetail = null)
-        {
-            cardConfiguration = cardConfiguration ?? throw new ArgumentNullException(nameof(cardConfiguration));
-
-            string issueDescription = string.Empty;
-            string issueCategory = string.Empty;
-
-            var dynamicElements = new List<AdaptiveElement>();
-            var ticketAdditionalFields = new List<AdaptiveElement>();
-            bool showDescriptionValidation = false;
-            bool showCategoryValidation = false;
-            bool showDateValidation = false;
-
-            if (showValidationMessage)
-            {
-                ticketDetail = ticketDetail ?? throw new ArgumentNullException(nameof(ticketDetail));
-                if (string.IsNullOrWhiteSpace(ticketDetail.Description))
-                {
-                    showDescriptionValidation = true;
-                }
-                else
-                {
-                    issueDescription = ticketDetail.Description;
-                }
-
-                if (string.IsNullOrWhiteSpace(ticketDetail.CategoryType))
-                {
-                    showCategoryValidation = true;
-                }
-                else
-                {
-                    issueCategory = ticketDetail.CategoryType;
-                }
-
-                if (ticketDetail.IssueOccurredOn == null
-                    || ticketDetail.IssueOccurredOn == DateTimeOffset.MinValue
-                    || DateTimeOffset.Compare(ticketDetail.IssueOccurredOn, DateTime.Today) > 0)
-                {
-                    showDateValidation = true;
-                }
-            }
-
-            ticketAdditionalFields = CardHelper.ConvertToAdaptiveCard(localizer, cardConfiguration.CardTemplate, showDateValidation);
-
+        /// <returns>Returns an attachment of new ticket.</returns
             dynamicElements.AddRange(new List<AdaptiveElement>
             {
                 new AdaptiveTextBlock
