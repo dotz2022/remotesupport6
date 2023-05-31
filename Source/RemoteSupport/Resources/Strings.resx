@@ -262,7 +262,7 @@
     <comment>Text to show in change status dropdown choice in request details card.</comment>
   </data>
   <data name="EndUserNotificationText" xml:space="preserve">
-    <value>Thank you. We have received your request for chat session #{0}. &lt;br/&gt;  &lt;br/&gt; &lt;p style="font-style: italic;"&gt;(1) Chat requests received after &lt;b&gt; 5pm (Mon-Fri) and 12pm (Sat)&lt;/b&gt; will be attended to on the next business day.&lt;/p&gt; &lt;p style="font-style: italic;"&gt;(2) Call back requests received after &lt;b&gt; 12pm (Mon-Sat)&lt;/b&gt; will be attended to on the next business day.&lt;/p&gt;</value>
+    <value>Thank you for contacting IT Helpdesk. &lt;br/&gt; &lt;br/&gt; To serve you better, we have moved to Digital Service Desk On HIP and MyWorld, effective on 1 Jun 2023. &lt;br/&gt; &lt;br/&gt; On Digital Service, you can seek help on issues that users commonly eexperienced, guide you to submit an IT case, or request for an IT Helpdesk agent to contact you. &lt;br/&gt;&lt;br/&gt; Simply open your HIP App or go to MyWorld, select "Digital Service Desk" to try it out!</value>
     <comment>Text to show EndUser notification when request is submitted.</comment>
   </data>
   <data name="SmeAssignedStatus" xml:space="preserve">
@@ -466,7 +466,7 @@
     <comment>Text to show in desciption place holder.</comment>
   </data>
   <data name="NewRequestTitle" xml:space="preserve">
-    <value>Hey there!</value>
+    <value>Did you know?</value>
     <comment>Text to show in new request card.</comment>
   </data>
   <data name="SendRequestButtonText" xml:space="preserve">
@@ -474,7 +474,7 @@
     <comment>Text to show for button action.</comment>
   </data>
   <data name="TellUsAboutProblemText" xml:space="preserve">
-    <value>IT Service Desk via Teams will move to Digital Service Desk on HIP and MyWorld on 1 Jun 2023.</value>
+    <value>To serve you better, we have moved to Digital Service Desk On HIP and MyWorld on 1 Jun 2023. Simply open your HIP App or go to MyWorld, select "Digital Service Desk" to try it out!</value>
     <comment>Text to show in card.</comment>
   </data>
   <data name="TitlePlaceholderText" xml:space="preserve">
