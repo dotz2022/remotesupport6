@@ -262,7 +262,7 @@
     <comment>Text to show in change status dropdown choice in request details card.</comment>
   </data>
   <data name="EndUserNotificationText" xml:space="preserve">
-    <value>Thank you for contacting IT Helpdesk. &lt;br/&gt; &lt;br/&gt; To serve you better, we have moved to Digital Service Desk On HIP and MyWorld, effective on 1 Jun 2023. &lt;br/&gt; &lt;br/&gt; On Digital Service, you can seek help on issues that users commonly eexperienced, guide you to submit an IT case, or request for an IT Helpdesk agent to contact you. &lt;br/&gt;&lt;br/&gt; Simply open your HIP App or go to MyWorld, select "Digital Service Desk" to try it out!</value>
+    <value>Thank you for contacting IT Helpdesk. &lt;br/&gt; &lt;br/&gt; To serve you better, we have moved to Digital Service Desk On HIP and MyWorld, effective on 1 Jun 2023. &lt;br/&gt; &lt;br/&gt; On Digital Service, you can seek help on issues that users commonly experienced, guide you to submit an IT case, or request for an IT Helpdesk agent to contact you. &lt;br/&gt;&lt;br/&gt; Simply open your HIP App or go to MyWorld, select "Digital Service Desk" to try it out!</value>
     <comment>Text to show EndUser notification when request is submitted.</comment>
   </data>
   <data name="SmeAssignedStatus" xml:space="preserve">
